@@ -1,20 +1,18 @@
-import 'package:firebase_flutter_korean_app/resources/auth.dart';
 import 'package:flutter/material.dart';
-
-class LogIn extends StatefulWidget {
+import 'package:firebase_flutter_korean_app/resources/auth.dart';
+class Registration extends StatefulWidget {
 
   final Function toggle;
-  LogIn({ this.toggle});
+  Registration({ this.toggle});
 
   @override
-  _LogInState createState() => _LogInState();
+  _RegistrationState createState() => _RegistrationState();
 }
 
-class _LogInState extends State<LogIn> {
+class _RegistrationState extends State<Registration> {
 
   final AuthenticationService _authenticate = AuthenticationService();
 
-  // text's state
 
   String mail = '';
   String password = '';
@@ -25,13 +23,13 @@ class _LogInState extends State<LogIn> {
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
         elevation: 0.0,
+        title: Text('Registration'),
         actions: <Widget>[
           FlatButton.icon(
-              icon: Icon(Icons.person_add, color: Colors.white,),
-            label: Text('Sign Up', style: TextStyle(color: Colors.white,),),
+            icon: Icon(Icons.person, color: Colors.white,),
+            label: Text('Sign In', style: TextStyle(color: Colors.white,),),
             onPressed: (){
               widget.toggle();
-
             },
 
           )
@@ -44,9 +42,9 @@ class _LogInState extends State<LogIn> {
             children:<Widget> [
               SizedBox(height: 20.0),
               TextFormField(
-                onChanged: (val){
-                  setState(() => mail = val);
-                }
+                  onChanged: (val){
+                    setState(() => mail = val);
+                  }
               ),
               SizedBox(height: 20.0),
               TextFormField(
@@ -57,16 +55,16 @@ class _LogInState extends State<LogIn> {
               ),
               SizedBox(height: 20.0),
               RaisedButton(
-                color: Colors.blue[400],
-                child: Text(
-                'Sign In',
-                style: TextStyle(color: Colors.white),
-              ),
-                onPressed: () async {
-                  print(mail);
-                  print(password);
+                  color: Colors.blue[400],
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () async {
+                    print(mail);
+                    print(password);
 
-                }
+                  }
 
               )
             ],

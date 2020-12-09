@@ -10,13 +10,13 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Home page of Korean app'),
+        title: Text('Корей тілін үйрену'),
         backgroundColor: Colors.blue,
         elevation: 0.0,
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.logout, color: Colors.white,),
-              label: Text('Log Out',
+              label: Text('Шығу',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 10

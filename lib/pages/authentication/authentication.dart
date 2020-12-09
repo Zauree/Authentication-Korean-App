@@ -11,17 +11,16 @@ class _AuthenticationState extends State<Authentication> {
 
   bool displayLogIn = true;
 
- // перед toggle должен быть void, но его не принимает
-    toggle() {
+    void toggle() {
     setState(() => displayLogIn = !displayLogIn);
   }
 
   @override
   Widget build(BuildContext context) {
     if(displayLogIn) {
-      return LogIn(toggle: toggle());
+      return LogIn(toggle: toggle);
     }else{
-      return Registration(toggle: toggle());
+      return Registration(toggle: toggle);
     }
   }
 }

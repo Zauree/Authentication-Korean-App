@@ -34,6 +34,30 @@ class AuthenticationService {
     }
   }
 
+  Future signUpMailPassword( String mail, String password) async{
+    try{
+      UserCredential res = await _authenticate.createUserWithEmailAndPassword(email: mail, password: password);
+      User user = res.user;
+      return _userFirebaseUser(user);
+
+    }catch(e){
+      print(e.toString());
+      return null;
+    }
+  }
+
+  Future logInMailPassword( String mail, String password) async{
+    try{
+      UserCredential res = await _authenticate.signInWithEmailAndPassword(email: mail, password: password);
+      User user = res.user;
+      return _userFirebaseUser(user);
+
+    }catch(e){
+      print(e.toString());
+      return null;
+    }
+  }
+
 
   Future signOut() async{
     try{

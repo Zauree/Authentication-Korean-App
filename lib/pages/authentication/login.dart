@@ -75,7 +75,7 @@ class _LogInState extends State<LogIn> {
               ),
               FlatButton.icon(
                 icon: Icon(Icons.person_add, color: Colors.white,),
-                label: Text('Аккаунтыңыз жоқ па?, Тіркелу', style: TextStyle(color: Colors.blue,),),
+                label: Text('Аккаунтыңыз жоқ па? Тіркелу', style: TextStyle(color: Colors.blue,),),
                 onPressed: () => widget.toggle(),
               ),
 

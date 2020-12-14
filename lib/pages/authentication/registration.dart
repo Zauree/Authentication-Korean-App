@@ -73,7 +73,7 @@ class _RegistrationState extends State<Registration> {
               ),
               FlatButton.icon(
                 icon: Icon(Icons.person, color: Colors.blue, size: 20,),
-                label: Text('Алдын ала тіркелдіңіз бе?', style: TextStyle(color: Colors.blue[600],),),
+                label: Text('Алдын ала тіркелдіңіз бе? Кіру', style: TextStyle(color: Colors.blue[600],),),
                 onPressed: () => widget.toggle(),
               )
 
